@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Registration Form</title>
+
+    <div id="error"></div>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const parameterValue = urlParams.get("e");
+      var error = parameterValue;
+
+      document.getElementById("error").textContent = error;
+    </script>
+
+    <link rel="stylesheet" href="../assets/css/register.css" />
+  </head>
+
+  <body>
+    <div class="container" id="container">
+      <h2>Register Yourself</h2>
+      <form
+        id="registrationForm"
+        action="../backend/register.php"
+        method="post"
+      >
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number</label>
+          <input
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            pattern="[0-9]{10}"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="course">Course</label>
+          <select id="course" name="course" required>
+            <option value="">Select Course</option>
+            <option value="MPC">MPC</option>
+            <option value="BPC">BPC</option>
+            <option value="MBPC">MBPC</option>
+            <option value="MEC">MEC</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="password">Create Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="form-group">
+          <button type="submit" name="submit">Submit</button>
+        </div>
+        <span id="error"></span>
+      </form>
+    </div>
+  </body>
+
+  <script src="../assets/javascript/registration.js"></script>
+</html>

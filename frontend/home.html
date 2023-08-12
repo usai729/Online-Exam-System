@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="../assets/javascript/home.js"></script>
+
+    <link rel="stylesheet" href="../assets/css/studentHome.css" />
+
+    <link
+      href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- External JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar" id="nav">
+      <a href="#" aria-disabled="true">Home</a>
+      <a href="#" aria-disabled="true">About</a>
+      <a href="../backend/logout.php">Log Out</a>
+      <a
+        onclick="hide_scheduled(this)"
+        class="hideBtn"
+        id="hideScheduledExamsBtn"
+      >
+        Hide Scheduled Exams
+      </a>
+      <a onclick="hide_scheduled(this)" class="hideBtn" id="hideResultsBtn">
+        Hide Results
+      </a>
+    </div>
+
+    <span id="dragBtn" onclick="showNav()">&darr;&darr;</span>
+
+    <div class="container">
+      <div id="student_info">
+        <h1 id="stu_name"></h1>
+        <h4 id="stu_id"></h4>
+        <h4 id="examsAttended"></h4>
+        <h4 id="overall_scoring"></h4>
+      </div>
+
+      <div class="tables-div">
+        <div id="scheduledExams">
+          <table id="exams">
+            <tr>
+              <th>Exam ID</th>
+              <th>Exam Subject/Name</th>
+              <th>Exam Date</th>
+              <th>Exam Time</th>
+              <th>Action</th>
+            </tr>
+            <!--
+            -->
+            <!--
+            -->
+            <caption>
+              Scheduled Exams
+            </caption>
+          </table>
+        </div>
+
+        <br />
+        <br />
+
+        <div id="examResults">
+          <table id="results">
+            <tr>
+              <th>#</th>
+              <th>Exam ID</th>
+              <th>Exam Subject/Name</th>
+              <th>Exam Date</th>
+              <th>Score</th>
+              <th>Answer Key</th>
+            </tr>
+            <caption>
+              Exam Results
+            </caption>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>Developed By - <b>U Sai Nath Rao</b></span>
+      <a href="http://www.instagram.com/skyxlogos">
+        <i class="fa fa-instagram"></i>
+      </a>
+    </div>
+  </body>
+</html>
