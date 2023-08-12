@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  font-family: "Roboto";
+}
+
+#dragBtn {
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+  margin: 12px;
+  display: none;
+}
+
+/* Style the navigation bar */
+.navbar {
+  background-color: #3e8e41;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: #2c6332;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+#student_info {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 10px 15px 0px;
+  padding: 10px;
+  width: 100%;
+  margin: 10px;
+}
+
+table {
+  table-layout: fixed;
+  background-color: #2c3333;
+  color: #e7f6f2;
+}
+
+tr {
+  outline: 0.5px solid #a5c9ca;
+}
+
+#scheduledExams,
+#examResults {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 1;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  margin: 10px;
+}
+#scheduledExams table,
+#examResults table {
+  width: 100%;
+}
+#scheduledExams table th,
+td,
+#examResults table th,
+td {
+  border: 1px solid #e7f6f2;
+  text-align: center;
+  padding: 5px;
+}
+
+#scheduledExams {
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+  word-wrap: break-word;
+}
+caption {
+  font-size: 1.2rem;
+  color: #262626;
+}
+
+.hideBtn {
+  border: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #3e8e41;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#results tr td {
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.tables-div {
+  display: flex;
+  height: auto;
+  justify-content: center;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  .tables-div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar a {
+    float: none;
+    display: flex;
+    text-align: left;
+  }
+
+  .navbar {
+    display: grid;
+    grid-template-columns: repeat(3, 1f);
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  #scheduledExams,
+  #examResults {
+    padding: 5px;
+  }
+
+  #scheduledExams table,
+  #examResults table {
+    font-size: 0.8rem;
+  }
+
+  #scheduledExams table th,
+  td,
+  #examResults table th,
+  td {
+    padding: 2px;
+  }
+
+  .hideBtn {
+    padding: 5px;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+}

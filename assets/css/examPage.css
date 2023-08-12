@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: "Roboto";
+  overflow: hidden;
+}
+
+/* Style the left and right column */
+.left-column {
+  width: 70%;
+  float: left;
+  height: 100%;
+}
+
+.right-column {
+  width: 30%;
+  float: left;
+  height: 100%;
+}
+
+.right-scroll {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.left-column,
+.right-column {
+  height: 100%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #3e8e41;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+#clearBtn {
+  cursor: pointer;
+  transition: 0.2s;
+  margin-left: 5px;
+}
+#clearBtn:hover {
+  text-decoration: underline;
+}
+
+/* Responsive layout - make the columns stack on top of each other */
+@media screen and (max-width: 600px) {
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+
+  .left-column {
+    height: 50%;
+  }
+
+  .right-column {
+    height: 50%;
+  }
+
+  .footer {
+    padding: 2px;
+  }
+}
